@@ -10,42 +10,40 @@ const attendee = {
 };
 
 // Logs only the attendee's name
-function logAttendeeName(attendee) {
-  console.log(attendee.name);
+function logAttendeeName(attendeeObj) {
+  console.log(attendeeObj.name);
 }
 
 // Logs only the ticket price (number)
-function logTicketPrice(attendee) {
-  console.log(attendee.ticketPrice);
+function logTicketPrice(attendeeObj) {
+  console.log(attendeeObj.ticketPrice);
 }
 
 // Updates ticketType
-function updateTicketType(attendee, newTicketType) {
-  if (typeof attendee === "object" && attendee !== null) {
-    attendee.ticketType = newTicketType;
+function updateTicketType(attendeeObj, newTicketType) {
+  if (typeof attendeeObj === "object" && attendeeObj !== null) {
+    attendeeObj.ticketType = newTicketType;
   }
-  console.log(`Updated Ticket Type: ${newTicketType}`);
 }
 
 // Updates ticketPrice
 function updateTicketPrice(attendeeObj, newTicketPrice) {
-  if (typeof attendee === "object" && attendee !== null) {
-    attendee.ticketPrice = newTicketPrice;
+  if (typeof attendeeObj === "object" && attendeeObj !== null) {
+    attendeeObj.ticketPrice = newTicketPrice;
   }
-  console.log(`Updated Ticket Price: ${newTicketPrice}`);
 }
 
 // Removes event property
-function removeEventProperty(attendee) {
-  if (typeof attendee === "object" && attendee !== null) {
-    delete attendee.event;
+function removeEventProperty(attendeeObj) {
+  if (typeof attendeeObj === "object" && attendeeObj !== null) {
+    delete attendeeObj.event;
   }
 }
 
 // Adds checkedIn property (default = true)
-function addCheckedInProperty(attendee) {
-  if (typeof attendee === "object" && attendee !== null) {
-    attendee.checkedIn = true;
+function addCheckedInProperty(attendeeObj) {
+  if (typeof attendeeObj === "object" && attendeeObj !== null) {
+    attendeeObj.checkedIn = true;
   }
 }
 
@@ -59,3 +57,4 @@ module.exports = {
   removeEventProperty,
   addCheckedInProperty
 };
+
